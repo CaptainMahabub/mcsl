@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2016 at 03:59 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- Generation Time: Aug 06, 2016 at 07:04 PM
+-- Server version: 10.1.8-MariaDB
+-- PHP Version: 5.6.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -714,6 +714,28 @@ INSERT INTO `verifiers` (`verifier_id`, `verifier_name`, `account_number`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `withdraw`
+--
+
+CREATE TABLE `withdraw` (
+  `id` int(11) NOT NULL,
+  `account_no` varchar(100) NOT NULL,
+  `date` date NOT NULL,
+  `check_no` varchar(100) NOT NULL,
+  `ammount` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `withdraw`
+--
+
+INSERT INTO `withdraw` (`id`, `account_no`, `date`, `check_no`, `ammount`) VALUES
+(2, '56567', '2016-08-02', '4455678', '234546577'),
+(3, '8797896', '2016-07-04', '35789897967', '2434565');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `years`
 --
 
@@ -937,6 +959,12 @@ ALTER TABLE `verifiers`
   ADD PRIMARY KEY (`verifier_id`);
 
 --
+-- Indexes for table `withdraw`
+--
+ALTER TABLE `withdraw`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `years`
 --
 ALTER TABLE `years`
@@ -1121,6 +1149,11 @@ ALTER TABLE `users`
 --
 ALTER TABLE `verifiers`
   MODIFY `verifier_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `withdraw`
+--
+ALTER TABLE `withdraw`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `years`
 --
