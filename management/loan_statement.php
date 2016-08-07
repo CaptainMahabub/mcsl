@@ -394,12 +394,12 @@
 					<a href="index.php">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Account Statement</a></li>
+				<li><a href="#">Loan Statement</a></li>
 			</ul>
 
 	<?php
 require('db_config.php');
- $sql =	"SELECT * FROM account_statement";
+ $sql =	"SELECT * FROM installment_deposite";
  $result = mysqli_query($mysqli,$sql);
  ?>		
 			
@@ -407,28 +407,27 @@ require('db_config.php');
 <div class="box-content">
 <div class="row">
 <div class="col-lg-8">
-<h1>Account Statement</h1>
+<h1>Loan Statement</h1>
 
 <form class="form-inline" role="form">
     <div class="form-group">
       <h2>Account No:</h2>
       <input type="text" class="form-control" id="account_no" placeholder="Enter Account Number">
     </div>
-    <button type="submit" class="btn btn-info">View Statement</button>
+    <button type="submit" class="btn btn-info">View Loan Statement</button>
   </form>
   
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
   <thead> 
- <th colspan="3">Deposite Ammount</th>
-      <th colspan="3">Withdraw Ammount</th>
+ <th colspan="4">Deposite Loan</th>
+      
     </tr>
     <tr>
       <td>Date</td>
       <td>Voucher No</td>
+	  <td>Instalment No</td>
       <td>Ammount</td>
-      <td>Date</td>
-      <td>Check No</td>
-      <td>Ammount</td>
+
     </tr>
  </thead>
  
@@ -438,24 +437,24 @@ require('db_config.php');
 	 
  ?>	
 	 <tr>
-      <td><?php echo $data['deposite_date']?></td>
-      <td><?php echo $data['voucher_no']?></td>
-      <td><?php echo $data['deposit_ammount']?></td>
-      <td><?php echo $data['withdraw_date']?></td>
-      <td><?php echo $data['check_no']?></td>
-      <td><?php echo $data['withdraw_ammount']?></td>
+      <td><?php echo $data['date']?></td>
+      <td><?php echo $data['traking_no']?></td>
+	  <td><?php echo $data['installment_no']?></td>
+      <td><?php echo $data['amount']?> Taka</td>
     </tr>
 				
     <?php } ?>	
     
      <tr>
-      <td colspan="2">Total Deposite:</td>
+      <td colspan="3">Total Deposite Loan:</td>
       <td>Taka</td>
-      <td colspan="2">Total Withdraw:</td>
+    </tr>
+	<tr>
+      <td colspan="3">Total Loan Ammount:</td>
       <td>Taka</td>
     </tr>
     <tr>
-      <td colspan="6"><h3><b>Account Balance:</b><h3></td>
+      <td colspan="4"><h3><b>Loan Due:</b><h3></td>
     </tr>	
                  </tbody>
 				 </table>            
