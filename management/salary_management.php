@@ -25,20 +25,28 @@
             </h4>
          </div>
          
-         <div class = "modal-body">
-            <form role = "form" name="salary_form" method="post" action="submit_salary.php" enctype="multipart/form-data">
+   <div class = "modal-body">
+    <form role = "form" name="salary_form" method="post" action="submit_salary.php">
 			
  	  <?php include("db_config.php");
-			$query=$mysqli->query("SELECT employee_id, employee_name FROM employees");?>  
+			$query=$mysqli->query("SELECT employee_id, employee_name FROM employees"); ?>  
 
    <div class = "form-group">
-      <label>Name</label>
+      
       <select name = "name">
-	  <option value="">Select Employee</option>
-<?php while($data=$query->fetch_array()){?>
-	  <option value="<?php echo $data['employee_id'];?>"><?php echo $data['employee_name'];?></option>
-			<?php }?>
+	  
 	  </select>
+   </div>
+
+   <div class = "form-group">
+      <label for = "employeename">Employee Name</label>
+      <select name="employeename">
+  <option value="january">Select Employee</option>
+  <?php while($data=$query->fetch_array()){?>
+    <option value="<?php echo $data['employee_id'];?>">
+    <?php echo $data['employee_name'];?></option>
+      <?php }?>
+</select>
    </div>
    <div class = "form-group">
       <label for = "month">Month</label>
@@ -58,12 +66,12 @@
 </select>
    </div>
    <div class = "form-group">
-      <label class = "sr-only" for = "year">Year</label>
-      <select name="year">
+  <label class = "sr-only" for = "year">Year</label>
+  <select name="year">
   <option value="2013">2013</option>
   <option value="2014">2014</option>
   <option value="2015">2015</option>
-    <option value="2016">2016</option>
+  <option value="2016">2016</option>
 </select>
    </div>
    <div class = "form-group">
