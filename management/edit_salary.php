@@ -42,10 +42,10 @@ header("location:view_employee_salary.php");
 <form method="post" action="">
 Employee Name:<b><?php echo $emp_name ?></b>
 <br/><br/>
-Month: <input type="text" name="month" placeholder="input age" value="<?php echo $data['month_name'] ?>"><br/><br/>
-Year: <input type="number" name="year" placeholder="input age" value="<?php echo $data['year_name'] ?>"><br/><br/>
-Salary : <input type="number" name="salary" placeholder="input age" value="<?php echo $data['salary_ammount'] ?>"><br/><br/>
-Salary Pay Date : <input type="date" name="salarypaydate" placeholder="input age" value="<?php echo $data['salary_pay_date'] ?>"><br/><br/>
+Month: <input type="text" name="month" placeholder="input month" value="<?php echo $data['month_name'] ?>"><br/><br/>
+Year: <input type="number" name="year" placeholder="input year" value="<?php echo $data['year_name'] ?>"><br/><br/>
+Salary : <input type="number" name="salary" placeholder="input salary" value="<?php echo $data['salary_ammount'] ?>"><br/><br/>
+Salary Pay Date : <input type="date" name="salarypaydate" placeholder="input date" value="<?php echo $data['salary_pay_date'] ?>"><br/><br/>
 
 
 <input type="submit" name="submit" value="Update">

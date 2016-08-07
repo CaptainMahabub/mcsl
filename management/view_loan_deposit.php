@@ -440,10 +440,10 @@ require('db_config.php');
 									<a class="btn btn-success" href="#">
 										<i class="halflings-icon white zoom-in"></i>  
 									</a>
-									<a class="btn btn-info" href="edit_deposite.php?id=<?php echo $data['id'] ?>">
+									<a class="btn btn-info" href="edit_loan_deposite.php?id=<?php echo $data['id'] ?>">
 										<i class="halflings-icon white edit"></i>  
 									</a>
-									<a class="btn btn-danger" href="delete_loan.php?id=<?php echo $data['salary_id'] ?>">
+									<a class="btn btn-danger" href="delete_loan_deposite.php?id=<?php echo $data['id'] ?>">
 										<i class="halflings-icon white trash"></i> 
 									</a>
 								</td>

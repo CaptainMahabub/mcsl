@@ -443,7 +443,7 @@ require('db_config.php');
 									<a class="btn btn-info" href="edit_loan.php?id=<?php echo $data['newloan_id'] ?>">
 										<i class="halflings-icon white edit"></i>  
 									</a>
-									<a class="btn btn-danger" href="delete_loan.php?id=<?php echo $data['id'] ?>">
+									<a class="btn btn-danger" href="delete_loan.php?id=<?php echo $data['newloan_id'] ?>">
 										<i class="halflings-icon white trash"></i> 
 									</a>
 								</td>

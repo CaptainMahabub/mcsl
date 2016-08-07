@@ -110,7 +110,7 @@
 </div><!-- /.modal -->
 
 <script>
-   $(function () { $('#newAccount').modal({
+   $(function () { $('#newEmployee').modal({
       keyboard: true
    })});
 </script>

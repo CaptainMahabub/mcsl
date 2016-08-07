@@ -445,7 +445,7 @@ require('db_config.php');
 									<a class="btn btn-info" href="edit_employee.php?id=<?php echo $data['employee_id'] ?>">
 										<i class="halflings-icon white edit"></i>  
 									</a>
-									<a class="btn btn-danger" href="#">
+									<a class="btn btn-danger" href="delete_employee.php?id=<?php echo $data['employee_id'] ?>">
 										<i class="halflings-icon white trash"></i> 
 									</a>
 								</td>
