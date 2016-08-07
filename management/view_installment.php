@@ -426,6 +426,10 @@ require('db_config.php');
  
  <tbody>
  <tr>
+      <td>Name:</td>
+      <td>&nbsp;</td>
+    </tr>
+ <tr>
       <td>Loan Ammount:</td>
       <td>&nbsp;</td>
     </tr>
