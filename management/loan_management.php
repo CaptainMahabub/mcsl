@@ -4,7 +4,7 @@
 								<li><a class="submenu" href="view_loan.php"><i class="icon-file-alt"></i><span class="hidden-tablet">View Loan</span></a></li>
 	<li><a class="submenu"  href="installment.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Installment</span></a></li>
 								<li><a class="submenu" href="view_installment.php"><i class="icon-file-alt"></i><span class="hidden-tablet">View Installment</span></a></li>
-								<li><a class="submenu"  href="loan_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Deposite</span></a></li>
+								<li><a class="submenu"  href="loan_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Loan Deposite</span></a></li>
 								<li><a class="submenu"  href="view_loan_deposit.php"><i class="icon-file-alt"></i><span class="hidden-tablet">View Deposite</span></a></li>
 							</ul>	
                             
