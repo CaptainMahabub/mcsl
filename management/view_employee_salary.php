@@ -399,7 +399,7 @@
 
 	<?php
 require('db_config.php');
- $sql =	"SELECT * FROM employee_salary ";
+ $sql =	"SELECT * FROM employee_salary, employees WHERE employees.employee_id = employee_salary.employee_id ";
  $result = mysqli_query($mysqli,$sql);
  ?>		
 			
@@ -427,7 +427,7 @@ require('db_config.php');
  
 	 <tr>
      <td><?php echo $data['salary_id']?></td>
-     <td><?php echo $data['employee_id']?></td>
+     <td><?php echo $data['employee_name']?></td>
      <td><?php echo $data['month_name']?></td>
      <td><?php echo $data['year_name']?></td>
 	  <td><?php echo $data['salary_ammount']?></td>
