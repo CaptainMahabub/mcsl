@@ -87,7 +87,7 @@
 </div><!-- /.modal -->
 
 <script>
-   $(function () { $('#myModal').modal({
+   $(function () { $('#newAccount').modal({
       keyboard: true
    })});
 </script>
