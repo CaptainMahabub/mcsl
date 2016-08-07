@@ -1,4 +1,4 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	
@@ -306,7 +306,7 @@ a<!DOCTYPE html>
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> admin
+								<i class="halflings-icon white user"></i> Admin
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -394,85 +394,68 @@ a<!DOCTYPE html>
 					<a href="index.php">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">View Installment</a></li>
+				<li><a href="#">Instalment Calculation</a></li>
 			</ul>
 
 	<?php
 require('db_config.php');
- $sql =	"SELECT * FROM installment";
+ $sql =	"SELECT * FROM account_statement";
  $result = mysqli_query($mysqli,$sql);
  ?>		
 			
- <div class="row-fluid sortable">		
-				<div class="box span12">
-					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon user"></i><span class="break"></span>Members</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
+
+<div class="box-content">
+<div class="row">
+<div class="col-lg-8">
+<h1>Instalment Calculation</h1>
+
+<form class="form-inline" role="form">
+    <div class="form-group">
+      <h2>Account No:</h2>
+      <input type="text" class="form-control" id="account_no" placeholder="Enter Account Number">
+    </div>
+    <button type="submit" class="btn btn-primary">View Instalment Calculation</button>
+  </form>
   
- <table border="2" class="table table-striped table-bordered bootstrap-datatable datatable">
-  <thead>
-<tr><th>ID</th><th>Account No</th><th>Name</th><th> Start Date</th><th> End Date</th><th>Loan Amount </th><th>Payable Amount </th><th>Installment Amount </th><th>Status</th><th>Actions</th></tr>
-
+ <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
+  <thead> 
+ <tr>
+      <th colspan="2">Instalment Calculation</th>
+    </tr>
  </thead>
+ 
  <tbody>
- 
- 
- 
- 
- 
-
- <?php
- while($data = mysqli_fetch_array($result)){
-	 
- ?>	
-
-
-
- 
-
-
-	
-	 <tr>
-	 <td><?php echo $data['id']?></td>
-     <td><?php echo $data['account_no']?></td>
-     <td><?php echo $data['name']?></td>
-     <td><?php echo $data['start_date']?></td>
-     <td><?php echo $data['end_date']?></td>
-	  <td><?php echo $data['loan_amount']?></td>
-	   <td><?php echo $data['payable_amount']?></td>
-	    <td><?php echo $data['installment_amount']?></td>
-		
-			   <td class="center">
-									<span class="label label-success">Active</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="">
-										<i class="halflings-icon white zoom-in"></i>  
-									</a>
-									<a class="btn btn-info" href="edit_installment.php?id=<?php echo $data['id'] ?>">
-										<i class="halflings-icon white edit"></i>  
-									</a>
-									<a class="btn btn-danger" href="delete_installment.php?id=<?php echo $data['id'] ?>">
-										<i class="halflings-icon white trash"></i> 
-									</a>
-								</td>	
-					  		
-								
-								
-								
-								
-								
-								
-                 <?php }
-?></tbody>	
+ <tr>
+      <td>Loan Ammount:</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Payable Ammount:</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Intalment Ammount:</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Loan Start Date:</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Loan End Date:</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Total Instalment:</td>
+      <td>&nbsp;</td>
+    </tr>
+                 </tbody>
 				 </table>            
-					</div>
+</div>
+</div>
+
+</div>
+
 				
 	 </div><!--/span-->
 			
@@ -503,7 +486,7 @@ require('db_config.php');
 		
 	<div class="modal hide fade" id="myModal">
 		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">×</button>
+			<button type="button" class="close" data-dismiss="modal">?</button>
 			<h3>Settings</h3>
 		</div>
 		<div class="modal-body">
@@ -528,7 +511,7 @@ require('db_config.php');
 	
 	<!-- start: JavaScript-->
 
-		<script src="js/jquery-1.9.1.min.js"></script>
+		<!--<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery-migrate-1.0.0.min.js"></script>
 	
 		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
@@ -581,7 +564,7 @@ require('db_config.php');
 	
 		<script src="js/retina.js"></script>
 
-		<script src="js/custom.js"></script>
+		<script src="js/custom.js"></script>-->
 	<!-- end: JavaScript-->
 	
 </body>
