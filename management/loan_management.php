@@ -1,10 +1,11 @@
 <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">Loan Management</span>&nbsp; &nbsp;<span class="label label-important"> * </span></a>
 							<ul>
-								<li><a class="submenu" data-toggle = "modal" data-target = "#newLoan"><i class="icon-file-alt"></i><span class="hidden-tablet"> Loan </span></a></li>
-								<li><a class="submenu" href="view_loan.php"><i class="icon-file-alt"></i><span class="hidden-tablet">View Loan</span></a></li>
-									<li><a class="submenu" href="view_installment.php"><i class="icon-file-alt"></i><span class="hidden-tablet">View Installment</span></a></li>
+								<li><a class="submenu" data-toggle = "modal" data-target = "#newLoan"><i class="icon-file-alt"></i><span class="hidden-tablet"> New Loan </span></a></li>
+								<li><a class="submenu" href="view_loan.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Loan Manage</span></a></li>
+									<li><a class="submenu" href="view_installment.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Installment Calculation</span></a></li>
 								<li><a class="submenu"  href="loan_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Loan Deposite</span></a></li>
 								<li><a class="submenu"  href="view_loan_deposit.php"><i class="icon-file-alt"></i><span class="hidden-tablet">View Deposite</span></a></li>
+								<li><a class="submenu"  href="loan_statement.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Loan Statement</span></a></li>
 							</ul>	
                             
                             
