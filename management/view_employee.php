@@ -1,4 +1,4 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	
@@ -409,8 +409,8 @@ require('db_config.php');
 <div class="col-lg-8">
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
   <thead> 
- <tr><th>ID</th><th>Photo</th><th>Employee Name</th><th> Fathers Name</th><th> Mothers Name</th><th>Date Of Birth </th><th>Gender </th>
- <th>Mobile No </th><th>Email </th><th>Document Number </th><th>Present Address </th><th>Joining Date </th><th>Designation </th>
+ <tr><th>ID</th><th>Photo</th><th>Employee Name</th><th>Date Of Birth </th><th>Gender </th>
+ <th>Mobile No </th><th>Email </th><th>Joining Date </th><th>Designation </th>
  <th>Salary </th><th>Status</th><th>Actions</th></tr>
  </thead>
  
@@ -423,15 +423,14 @@ require('db_config.php');
      <td><?php echo $data['employee_id']?></td>
 	 <td><img src="<?php echo $data['employee_photo']?>" title="<?php echo $data['employee_name']?> photo" alt="<?php echo $data['employee_name']?> photo"></td>
      <td><?php echo $data['employee_name']?></td>
-     <td><?php echo $data['employee_fathers_name']?></td>
-     <td><?php echo $data['employee_mothers_name']?></td>
+    
 	  <td><?php echo $data['employee_birth_date']?></td>
 	   <td><?php echo $data['gender_type']?></td>
 	    <td><?php echo $data['employee_mobile']?></td>
 		 <td><?php echo $data['employee_email']?></td>
 		
-		   <td><?php echo $data['document_number']?></td>
-		    <td><?php echo $data['employee_present_address']?></td>
+		  
+		   
 			
 			  <td><?php echo $data['employee_joining_date']?></td>
 			   <td><?php echo $data['employee_designation']?></td>
@@ -444,11 +443,6 @@ require('db_config.php');
 										<i class="halflings-icon white zoom-in"></i>  
 									</a>
 									<a class="btn btn-info" href="edit_employee.php?id=<?php echo $data['employee_id'] ?>">
-									
-									
-									
-									
-									
 										<i class="halflings-icon white edit"></i>  
 									</a>
 									<a class="btn btn-danger" href="#">
@@ -456,12 +450,12 @@ require('db_config.php');
 									</a>
 								</td>
 				
-                 <?php }
-?>		</tbody>
+                 <?php } ?>		
+                 </tbody>
 				 </table>            
 </div>
 </div>
-<div class="col-lg-4"></div>
+
 </div>
 
 				
@@ -494,7 +488,7 @@ require('db_config.php');
 		
 	<div class="modal hide fade" id="myModal">
 		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">×</button>
+			<button type="button" class="close" data-dismiss="modal">ï¿½</button>
 			<h3>Settings</h3>
 		</div>
 		<div class="modal-body">
@@ -519,7 +513,7 @@ require('db_config.php');
 	
 	<!-- start: JavaScript-->
 
-		<script src="js/jquery-1.9.1.min.js"></script>
+		<!--<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery-migrate-1.0.0.min.js"></script>
 	
 		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
@@ -572,7 +566,7 @@ require('db_config.php');
 	
 		<script src="js/retina.js"></script>
 
-		<script src="js/custom.js"></script>
+		<script src="js/custom.js"></script>-->
 	<!-- end: JavaScript-->
 	
 </body>
