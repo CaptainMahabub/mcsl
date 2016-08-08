@@ -409,12 +409,12 @@ require('db_config.php');
 <div class="col-lg-8">
 <h1>Instalment Calculation</h1>
 
-<form class="form-inline" role="form">
+<form class="form-inline" role="form" method="post">
     <div class="form-group">
       <h2>Account No:</h2>
-      <input type="text" class="form-control" id="account_no" placeholder="Enter Account Number">
+      <input type="text" class="form-control" name="account_no" id="account_no" placeholder="Enter Account Number">
     </div>
-    <button type="submit" class="btn btn-primary">View Instalment Calculation</button>
+    <input type="submit" name="submit" value="View Instalment Calculation" class="btn btn-primary">
   </form>
   
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
@@ -423,38 +423,54 @@ require('db_config.php');
       <th colspan="2">Instalment Calculation</th>
     </tr>
  </thead>
- 
+ <?php if(isset($_POST['submit'])){
+ 	extract($_POST);
+ 	//print_r($_POST);
+ 	$qu=$mysqli->query("SELECT * FROM new_loan WHERE account_no='$account_no'");
+ 	$data=$qu->fetch_array();
+ 	} ?>
  <tbody>
  <tr>
       <td>Name:</td>
-      <td>&nbsp;</td>
+      <td><?php $accountno=$data['account_no'];
+      $re=$mysqli->query("SELECT account_holder_id, account_holder_name FROM account_holders WHERE account_holder_id='$accountno'");
+      $account=$re->fetch_array();
+      echo $account['account_holder_name'];
+       ?></td>
     </tr>
  <tr>
       <td>Loan Ammount:</td>
-      <td>&nbsp;</td>
+      <td><?php echo $loan=$data['loan_amount']; ?></td>
+    </tr>
+    <tr>
+      <td>Interest Ammount:</td>
+      <td><?php $in=($loan*10/100); echo $in ?></td>
     </tr>
     <tr>
       <td>Payable Ammount:</td>
-      <td>&nbsp;</td>
+      <td><?php echo $pay=($in+$loan); ?></td>
     </tr>
     <tr>
-      <td>Intalment Ammount:</td>
-      <td>&nbsp;</td>
+      <td>Intallment Ammount:</td>
+      <td><?php echo round($pay/$data['installment'],2); ?></td>
     </tr>
     <tr>
       <td>Loan Start Date:</td>
-      <td>&nbsp;</td>
+      <td><?php echo $start=$data['date']; ?></td>
     </tr>
     <tr>
       <td>Loan End Date:</td>
-      <td>&nbsp;</td>
+      <td><?php if($data['installment']==12){$date = strtotime("+1 year", strtotime($start)); echo date("Y-m-d", $date);}
+      elseif($data['installment']==24){$date = strtotime("+2 year", strtotime($start)); echo date("Y-m-d", $date);}
+      elseif($data['installment']==36){$date = strtotime("+3 year", strtotime($start)); echo date("Y-m-d", $date);}
+ ?></td>
     </tr>
     <tr>
       <td>Total Instalment:</td>
-      <td>&nbsp;</td>
+      <td><?php echo $data['installment']; ?></td>
     </tr>
-                 </tbody>
-				 </table>            
+   </tbody>
+	 </table>            
 </div>
 </div>
 
