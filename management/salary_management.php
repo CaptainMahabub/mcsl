@@ -1,4 +1,4 @@
-<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">Salary Management</span>&nbsp; &nbsp;<span class="label label-important"> * </span></a>
+<a class="dropmenu" href="#"><i class="icon-folder-close-alt">&nbsp;</i><span class="hidden-tablet">Salary Management</span>&nbsp;<span class="label label-important"> * </span></a>
 							<ul>
 								<li><a class="submenu" data-toggle = "modal" data-target = "#newSalary"><i class="icon-file-alt"></i><span class="hidden-tablet"> Employee Salary</span></a></li>
 								<li><a class="submenu" href="view_employee_salary.php"><i class="icon-file-alt"></i><span class="hidden-tablet">View Employee salary</span></a></li>

@@ -1,4 +1,4 @@
-<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">Loan Management</span>&nbsp; &nbsp;<span class="label label-important"> * </span></a>
+<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">Loan Management</span>&nbsp;<span class="label label-important"> * </span></a>
 							<ul>
 								<li><a class="submenu" data-toggle = "modal" data-target = "#newLoan"><i class="icon-file-alt"></i><span class="hidden-tablet"> New Loan </span></a></li>
 								<li><a class="submenu" href="view_loan.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Loan Manage</span></a></li>

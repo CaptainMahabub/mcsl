@@ -1,4 +1,4 @@
-<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">Account Management</span>&nbsp; &nbsp;<span class="label label-important"> * </span></a>
+<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i>&nbsp;<span class="hidden-tablet">Account &nbsp; Management</span>&nbsp; &nbsp;<span class="label label-important"> * </span></a>
 							<ul>
 								<li><a class="submenu" href="new_account.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> New Account</span></a></li>
                                 
