@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2016 at 07:04 PM
+-- Generation Time: Aug 08, 2016 at 02:39 PM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -51,7 +51,7 @@ CREATE TABLE `account_holders` (
 
 INSERT INTO `account_holders` (`account_holder_id`, `account_holder_name`, `account_holder_fathersname`, `account_holder_mothersname`, `account_holder_birthdate`, `gender_type`, `account_holder_mobile`, `account_holder_email`, `document_number`, `account_type_name`, `primar_savings_amount`, `account_holder_present_address`, `branch_name`, `verifier_name`, `nominee_name`, `account_holder_photo`) VALUES
 (11111, 'Mahabub', 'Mahabub', 'Mahabub', '2001-09-24', 'male', 1234567, 's@gmail.com', '46546465', 'saving', 500, 'mirpur', 'dhaka', 'mizan', 'mizan', 'yes'),
-(11112, 'dss', 'sds', 'dss', '0000-00-00', 'dss', 0, 'dss', 'dss', 'dss', 0, 'sds', 'dss', 'dss', 'sds', 'photopath'),
+(11112, 'Mamun Malik', 'sds', 'dss', '2016-08-01', 'dss', 0, 'dss', 'dss', 'dss', 0, 'sds', 'dss', 'dss', 'sds', 'photopath'),
 (11113, 'dfgddfgd', 'fdg', 'fdg', '2016-08-02', 'male', 93498546, 'jj@gmail.com', '456575457658678', 'dfgdfh', 0, 'dytryrt', 'dgd', 'dgdg', 'dfgd', 'photopath'),
 (11114, '', '', '', '2016-07-31', 'male', 0, '', '', '', 0, '', '', '', '', 'photopath'),
 (11115, '', '', '', '2016-08-01', 'male', 0, '', '', '', 0, '', '', '', '', 'photopath'),
@@ -68,6 +68,24 @@ INSERT INTO `account_holders` (`account_holder_id`, `account_holder_name`, `acco
 (11126, '', '', '', '2016-08-02', 'male', 0, 'dd@gmail.com', '', '', 0, '', '', '', '', 'img/account_holder/9-headboard-detail.jpg'),
 (11127, 'kgk', 'utytey', 'klkj', '2016-08-21', 'male', 2147483647, 'hh@gmail.com', '6537598078676', 'kjkjh', 0, '', '', '', '', 'img/account_holder/ashrafuzzaman_fc1072da.png'),
 (11128, '', '', '', '0000-00-00', '', 0, '', '', '', 0, '', '', '', '', 'img/account_holder/');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_statement`
+--
+
+CREATE TABLE `account_statement` (
+  `statement_id` int(11) NOT NULL,
+  `deposite_account_no` int(11) NOT NULL,
+  `deposite_date` date NOT NULL,
+  `voucher_no` int(11) NOT NULL,
+  `deposit_ammount` int(11) NOT NULL,
+  `withdraw_account_no` int(11) NOT NULL,
+  `withdraw_date` date NOT NULL,
+  `check_no` int(11) NOT NULL,
+  `withdraw_ammount` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -205,24 +223,32 @@ CREATE TABLE `dealers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `deposite`
+-- Table structure for table `deposite_withdraw`
 --
 
-CREATE TABLE `deposite` (
+CREATE TABLE `deposite_withdraw` (
   `id` int(11) NOT NULL,
   `account_no` varchar(100) NOT NULL,
+  `deposite_or_withdraw` varchar(12) NOT NULL,
   `date` date NOT NULL,
   `tracking_no` varchar(100) NOT NULL,
   `ammount` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `deposite`
+-- Dumping data for table `deposite_withdraw`
 --
 
-INSERT INTO `deposite` (`id`, `account_no`, `date`, `tracking_no`, `ammount`) VALUES
-(1, '567686', '2016-08-02', '56876978056', '345456'),
-(2, '54678785656', '2016-06-06', '3565787', '343546');
+INSERT INTO `deposite_withdraw` (`id`, `account_no`, `deposite_or_withdraw`, `date`, `tracking_no`, `ammount`) VALUES
+(1, '567686', '', '2016-08-02', '56876978056', '345456'),
+(2, '54678785656', '', '2016-06-06', '3565787', '343546'),
+(3, '11111', 'deposite', '2016-08-01', '12568', '20000'),
+(4, '11111', 'withdraw', '2016-08-02', '1265489', '15000'),
+(5, '11111', 'deposite', '2016-08-03', '125154', '30000'),
+(6, '11111', 'withdraw', '2016-08-04', '15154', '10000'),
+(7, '11111', 'deposite', '2016-08-04', '5664', '7000'),
+(8, '11112', 'deposite', '2016-08-01', '46454', '16400'),
+(9, '11112', 'withdraw', '2016-08-02', '54545', '4500');
 
 -- --------------------------------------------------------
 
@@ -296,7 +322,6 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`employee_id`, `employee_name`, `employee_fathers_name`, `employee_mothers_name`, `employee_birth_date`, `gender_type`, `employee_mobile`, `employee_email`, `document_number`, `employee_present_address`, `employee_joining_date`, `employee_designation`, `employee_salary`, `employee_photo`) VALUES
-(1, 'm', 'm', 'm', '2016-07-20', 'm', '22', 'sdfsdf', 'fdfdf', 'dfdfd', '2016-07-30', 'dfdf', 556, 'dfd'),
 (2, 'Sena', 'Ali khan', 'sdf', '0000-00-00', 'Male', '76898089', 'asmaumaiya@gmail.com', '568799', 'ddfgfh', '0000-00-00', 'Manager', 29000, 'img/employee/picture.jpg'),
 (3, 'Sena', 'Ali khan', 'sdf', '0000-00-00', 'Male', '76898089', 'asmaumaiya@gmail.com', '568799', 'ddfgfh', '0000-00-00', 'Manager', 29000, 'img/employee/picture.jpg'),
 (4, 'ere', 'errete', 'wertwet', '1990-09-09', 'Male', '5686787978', 'asmaumaiya@gmail.com', '567878989', 'dsfrdg', '2016-09-09', 'Manager', 30000, 'img/employee/picture.jpg'),
@@ -323,11 +348,11 @@ CREATE TABLE `employee_salary` (
 --
 
 INSERT INTO `employee_salary` (`salary_id`, `employee_id`, `month_name`, `year_name`, `salary_ammount`, `salary_pay_date`) VALUES
-(1, 0, 'jan', 2015, 5000, '2016-07-30 10:29:00'),
-(2, 0, '12', 31, 20000, '2014-09-09 00:00:00'),
-(3, 0, 'June', 2015, 15000, '2016-08-03 00:00:00'),
-(4, 0, '31', 31, 10000, '2016-08-09 00:00:00'),
-(5, 0, '31', 44, 10000, '2014-09-09 00:00:00'),
+(1, 1, 'jan', 2015, 5000, '2016-07-30 10:29:00'),
+(2, 2, '12', 31, 20000, '2014-09-09 00:00:00'),
+(3, 3, 'June', 2015, 15000, '2016-08-03 00:00:00'),
+(4, 4, '31', 31, 10000, '2016-08-09 00:00:00'),
+(5, 5, '31', 44, 10000, '2014-09-09 00:00:00'),
 (6, 0, 'january', 2016, 324, '2016-08-09 00:00:00'),
 (7, 0, 'February', 2016, 34000, '2016-08-03 06:51:36'),
 (8, 0, 'janu', 2020, 5555555, '2016-08-12 00:00:00'),
@@ -424,7 +449,10 @@ CREATE TABLE `installment_deposite` (
 --
 
 INSERT INTO `installment_deposite` (`id`, `account_no`, `date`, `traking_no`, `amount`, `installment_no`) VALUES
-(1, '123555', '2016-08-03', 555, '400000', '16');
+(1, '123555', '2016-08-03', 555, '400000', '16'),
+(2, '11111', '2016-01-01', 8743574, '1200', '1'),
+(3, '11112', '2016-08-05', 5111, '5000', '1'),
+(4, '11112', '2016-08-06', 5616, '7500', '2');
 
 -- --------------------------------------------------------
 
@@ -499,6 +527,7 @@ CREATE TABLE `new_loan` (
   `account_no` varchar(50) NOT NULL,
   `date` date NOT NULL,
   `loan_amount` varchar(50) NOT NULL,
+  `interest_amount` int(20) NOT NULL,
   `installment` varchar(50) NOT NULL,
   `grantors` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -507,8 +536,8 @@ CREATE TABLE `new_loan` (
 -- Dumping data for table `new_loan`
 --
 
-INSERT INTO `new_loan` (`newloan_id`, `account_no`, `date`, `loan_amount`, `installment`, `grantors`) VALUES
-(1, '', '2016-08-04', '', '20', 'Wasrer');
+INSERT INTO `new_loan` (`newloan_id`, `account_no`, `date`, `loan_amount`, `interest_amount`, `installment`, `grantors`) VALUES
+(4, '11112', '2016-08-08', '50000', 7500, '36', 'Mahabub');
 
 -- --------------------------------------------------------
 
@@ -755,6 +784,12 @@ ALTER TABLE `account_holders`
   ADD PRIMARY KEY (`account_holder_id`);
 
 --
+-- Indexes for table `account_statement`
+--
+ALTER TABLE `account_statement`
+  ADD PRIMARY KEY (`statement_id`);
+
+--
 -- Indexes for table `account_types`
 --
 ALTER TABLE `account_types`
@@ -803,9 +838,9 @@ ALTER TABLE `dealers`
   ADD PRIMARY KEY (`dealer_id`);
 
 --
--- Indexes for table `deposite`
+-- Indexes for table `deposite_withdraw`
 --
-ALTER TABLE `deposite`
+ALTER TABLE `deposite_withdraw`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -980,6 +1015,11 @@ ALTER TABLE `years`
 ALTER TABLE `account_holders`
   MODIFY `account_holder_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11129;
 --
+-- AUTO_INCREMENT for table `account_statement`
+--
+ALTER TABLE `account_statement`
+  MODIFY `statement_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `account_types`
 --
 ALTER TABLE `account_types`
@@ -1020,10 +1060,10 @@ ALTER TABLE `dashboards`
 ALTER TABLE `dealers`
   MODIFY `dealer_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `deposite`
+-- AUTO_INCREMENT for table `deposite_withdraw`
 --
-ALTER TABLE `deposite`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `deposite_withdraw`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `districts`
 --
@@ -1073,7 +1113,7 @@ ALTER TABLE `installment`
 -- AUTO_INCREMENT for table `installment_deposite`
 --
 ALTER TABLE `installment_deposite`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `installment_type`
 --
@@ -1093,7 +1133,7 @@ ALTER TABLE `months`
 -- AUTO_INCREMENT for table `new_loan`
 --
 ALTER TABLE `new_loan`
-  MODIFY `newloan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `newloan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `nominees`
 --
