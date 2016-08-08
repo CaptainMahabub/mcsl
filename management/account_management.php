@@ -4,7 +4,7 @@
                                 
 								<li><a class="submenu" href="view_account.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Account</span></a></li>
 								
-							<li><a class="submenu" data-toggle = "modal" data-target = "#newDeposite"><i class="icon-file-alt"></i><span class="hidden-tablet">New Deposite</span></a></li>
+							<li><a class="submenu" data-toggle = "modal" data-target = "#newDeposite"><i class="icon-file-alt"></i><span class="hidden-tablet">Deposite / Withdraw</span></a></li>
                                 
                                  <li><a class="submenu" href="view_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Deposite</span></a></li>
                                  
