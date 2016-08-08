@@ -442,28 +442,53 @@ require('db_config.php');
  
  <tbody>
  <tr>
-      <td>New Account Holder:</td>
-      <td>&nbsp;</td>
+    <td>New Account Holder:</td>
+    <td><?php
+		$qu=$mysqli->query("SELECT account_holder_id FROM account_holders");
+		$res=$qu->fetch_array();
+		if($month=="august"){echo $qu->num_rows;}
+		?>		
+	</td>
     </tr>
     <tr>
       <td>New Loan Holder:</td>
-      <td>&nbsp;</td>
+      <td><?php
+		$query=$mysqli->query("SELECT newloan_id FROM new_loan");
+		$re=$query->fetch_array();
+		if($month=="august"){echo $query->num_rows;}
+		?></td>
     </tr>
     <tr>
-      <td>Total Deposite Ammount:</td>
-      <td>&nbsp;</td>
+      <td>Total Deposite Amount:</td>
+      <td><?php
+		$query=$mysqli->query("SELECT account_no, deposite_or_withdraw, SUM(ammount) AS deposit FROM deposite_withdraw WHERE deposite_or_withdraw='deposite'");
+		$result=$query->fetch_array();
+		if($month=="august"){echo $result['deposit'];}
+		?> Taka</td>
     </tr>
     <tr>
-      <td>Total Withdraw Ammount:</td>
-      <td>&nbsp;</td>
+      <td>Total Withdraw Amount:</td>
+      <td><?php
+		$query=$mysqli->query("SELECT account_no, deposite_or_withdraw, SUM(ammount) AS withdraw FROM deposite_withdraw WHERE deposite_or_withdraw='withdraw'");
+		$result=$query->fetch_array();
+		if($month=="august"){echo $result['withdraw'];}
+		?> Taka</td>
     </tr>
     <tr>
-      <td>Total Loan Ammount:</td>
-      <td>&nbsp;</td>
+      <td>Total Loan Amount:</td>
+      <td><?php
+		$query=$mysqli->query("SELECT account_no, SUM(loan_amount) AS loan FROM new_loan");
+		$result=$query->fetch_array();
+		if($month=="august"){echo $result['loan'];}
+		?> Taka</td>
     </tr>
     <tr>
       <td>Employee Salary:</td>
-      <td>&nbsp;</td>
+      <td><?php
+		$query=$mysqli->query("SELECT salary_id,month_name, SUM(salary_ammount) AS salary FROM employee_salary WHERE month_name='$month'");
+		$result=$query->fetch_array();
+		if($month=="august"){echo $result['salary'];}
+		?> Taka</td>
     </tr>
                  </tbody>
 				 </table> 
