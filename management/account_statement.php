@@ -414,10 +414,14 @@
   </form>
  <?php
 require('db_config.php');
+if(isset($_POST['submit'])){
 extract($_POST);
  $sql =	"SELECT * FROM deposite_withdraw WHERE account_no='$account_no'";
  $result = mysqli_query($mysqli,$sql);
+ $res=$mysqli->query("SELECT account_holder_id, account_holder_name FROM account_holders WHERE account_holder_id='$account_no'");
+ $accname=$res->fetch_array();
  ?>
+<h3 align="center">Account Holder Name: <?php echo $accname['account_holder_name'] ?></h3>
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
   <thead> 
  <th colspan="4">Account Statement</th>
@@ -433,6 +437,7 @@ extract($_POST);
  
  <tbody>
  <?php
+ $count=$result->num_rows;
  while($data = mysqli_fetch_array($result)){
 	 
  ?>	
@@ -448,17 +453,26 @@ extract($_POST);
     
      <tr>
       <td colspan="3">Total Deposite:</td>
-      <td>Taka</td>
+      <td><?php 
+      $sum=$mysqli->query("SELECT account_no, deposite_or_withdraw, ammount, SUM(ammount) as sum_amount FROM deposite_withdraw WHERE account_no='$account_no' AND deposite_or_withdraw='deposite'");
+      $sumDe=$sum->fetch_array();
+      echo "<b>".$sumDe['sum_amount']."</b>";
+       ?> Tk.</td>
 	  </tr>
 	  <tr>
       <td colspan="3">Total Withdraw:</td>
-      <td>Taka</td>
+      <td><?php 
+      $sum=$mysqli->query("SELECT account_no, deposite_or_withdraw, ammount, SUM(ammount) as sum_amount FROM deposite_withdraw WHERE account_no='$account_no' AND deposite_or_withdraw='withdraw'");
+      $sumWi=$sum->fetch_array();
+      echo "<b>".$sumWi['sum_amount']."</b>";
+       ?> Tk.</td>
     </tr>
     <tr>
-      <td colspan="4"><h3><b>Account Balance:</b><h3></td>
+      <td colspan="4"><h3><b>Account Balance: <?php echo ($sumDe['sum_amount']-$sumWi['sum_amount']); ?> Tk.</b><h3></td>
     </tr>	
-                 </tbody>
-				 </table>            
+</tbody>
+</table> 
+<?php } ?>           
 </div>
 </div>
 
