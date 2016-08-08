@@ -29,27 +29,22 @@
          </div>
          
          <div class = "modal-body">
-            <form role = "form" name="loan_form" method="post" action="submit_loan.php" enctype="multipart/form-data">
-			
-   
-  <div class = "form-group">
-      <label class = "sr-only" for = "name"></label>
-      <input type = "hidden" name="id" class = "form-control" id = "name" placeholder = "Enter Name">
-   </div> 
+            <form role = "form" name="loan_form" method="post" action="submit_loan.php">
+			 
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Account No</label>
-      <input type = "text" name="accountno" class = "form-control" id = "name" placeholder = "Enter Account No">
+      <label class = "sr-only" for = "accountno">Account No</label>
+      <input type = "text" name="accountno" class = "form-control" id = "accountno" placeholder = "Enter Account No">
    </div>
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Date</label>
-       <input type = "date" name="date" class = "form-control" id = "name">
+      <label class = "sr-only" for = "date">Date</label>
+       <input type = "date" name="date" class = "form-control" id = "date">
    </div>
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Loan Amount</label>
-      <input type = "number" name="loanamount" class = "form-control" id = "name">
+      <label class = "sr-only" for = "loanamount">Loan Amount</label>
+      <input type = "number" name="loanamount" class = "form-control" id = "loanamount">
    </div>
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Installment</label>
+      <label class = "sr-only" for = "installment">Installment</label>
       <select name="installment" class = "form-control" id = "installment">
       <option value="">Select Installment</option>
       <option value="12">1 Year</option> 
@@ -59,8 +54,8 @@
    </div>
    
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Grantors</label>
-      <input type = "text" name="grantors" class = "form-control" id = "name" placeholder = "Enter Grantors">
+      <label class = "sr-only" for = "grantors">Grantors</label>
+      <input type = "text" name="grantors" class = "form-control" id = "grantors" placeholder = "Enter Grantors">
    </div>
    
   <div class = "form-group">
