@@ -464,8 +464,8 @@ require('db_config.php');
                  <?php } ?>	
 				 </table>
                  
-                 <div class="pagination pagination-centered">
-						  <!--<ul>
+                 <!--<div class="pagination pagination-centered">
+						  <ul>
 							<li><a href="#">Prev</a></li>
 							<li class="active">
 							  <a href="#">1</a>
@@ -474,8 +474,8 @@ require('db_config.php');
 							<li><a href="#">3</a></li>
 							<li><a href="#">4</a></li>
 							<li><a href="#">Next</a></li>
-						  </ul>-->
-						</div>                
+						  </ul>
+						</div>   -->             
 					
 				
 	 </div><!--/span-->

@@ -12,6 +12,9 @@ $data = $row->fetch_array();
 
 ?>
 
+
+<h2>Edit Withdraw</h2>
+
 <form class = "form-inline" role = "form" name="account_form" method="post" action="update_withdraw.php" enctype="multipart/form-data">          
    
    <div class = "form-group">
@@ -40,6 +43,8 @@ $data = $row->fetch_array();
    </div>
    
 </form>
+
+<a href="view_withdraw.php"> Show Data</a>
 
 
 

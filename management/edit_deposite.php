@@ -10,12 +10,12 @@ $data = $row->fetch_array();
 
 ?>
 
+
+<h2>Edit Deposite</h2>
+
 <form class = "form-inline" role = "form" name="account_form" method="post" action="update_deposite.php" enctype="multipart/form-data">
    
                             
-                            
-  
-
 <div class = "form-group">
       <label class = "sr-only" for = "id"></label>
       <input type = "hidden" name="id" class = "form-control" id = "id" value = "<?php echo $id;?>">
@@ -62,3 +62,4 @@ $data = $row->fetch_array();
    
 </form>
          
+         <a href="view_deposite.php"> Show Data</a>
