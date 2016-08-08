@@ -29,7 +29,7 @@
          </div>
          
          <div class = "modal-body">
-            <form class = "form-inline" role = "form" name="loan_form" method="post" action="submit_loan.php" enctype="multipart/form-data">
+            <form role = "form" name="loan_form" method="post" action="submit_loan.php" enctype="multipart/form-data">
 			
    
   <div class = "form-group">
@@ -50,7 +50,12 @@
    </div>
    <div class = "form-group">
       <label class = "sr-only" for = "name">Installment</label>
-      <input type = "number" name="installment" class = "form-control" id = "name">
+      <select name="installment" class = "form-control" id = "installment">
+      <option value="">Select Installment</option>
+      <option value="12">1 Year</option> 
+      <option value="24">2 Years</option> 
+      <option value="36">3 Years</option>  
+      </select>
    </div>
    
    <div class = "form-group">
