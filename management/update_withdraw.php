@@ -12,13 +12,14 @@ extract($_POST);
 
 
 
-$mysqli->query("UPDATE withdraw SET account_no='$account_no', 
+
+$query=$mysqli->query("UPDATE withdraw SET account_no='$account_no', 
 	date='$date', check_no='$check_no',
-	ammount='$ammount') WHERE id='$id'");
+	ammount='$ammount' WHERE id='$id'");
 
 
-	
-header("location:index.php");
+if($query) {	
+header("location:view_withdraw.php");
 
 }
 else{
@@ -26,6 +27,6 @@ else{
 	echo "<h2>Data submit not successfull</h2>";
 }
 
-
+}
 
 ?>
