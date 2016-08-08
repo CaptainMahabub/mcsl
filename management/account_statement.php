@@ -478,6 +478,8 @@ extract($_POST);
 
 </div>
 
+<a href="index.php"> Dashboard </a>
+
 				
 	 </div><!--/span-->
 			
@@ -488,7 +490,7 @@ extract($_POST);
  
 
 				
-
+ 
 				
 				
 
@@ -501,9 +503,13 @@ extract($_POST);
        
 
 	</div><!--/.fluid-container-->
+   
 	
 			<!-- end: Content -->
 		</div><!--/#content.span10-->
+        
+        
+        
 		
 		
 	<div class="modal hide fade" id="myModal">
