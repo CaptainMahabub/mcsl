@@ -444,13 +444,11 @@ require('db_config.php');
     </tr>
     <tr>
       <td>Interest Ammount:</td>
-      <td><?php if($data['installment']==12){echo $in=($loan*.10);echo "&nbsp;&nbsp;&nbsp;"."(Interest=10%)";}
-      elseif($data['installment']==24){echo $in=($loan*.12);echo "&nbsp;&nbsp;&nbsp;"."(Interest=12%)";}
-      elseif($data['installment']==36){echo $in=($loan*.15);echo "&nbsp;&nbsp;&nbsp;"."(Interest=15%)";} ?></td>
+      <td><?php echo $int=$data['interest_amount']; ?></td>
     </tr>
     <tr>
       <td>Payable Ammount:</td>
-      <td><?php echo $pay=($in+$loan); ?></td>
+      <td><?php echo $pay=($int+$loan); ?></td>
     </tr>
     <tr>
       <td>Intallment Ammount:</td>
