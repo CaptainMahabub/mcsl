@@ -30,9 +30,9 @@ $data = $row->fetch_array();
 
 <div class = "form-group">
 
-<label class = "sr-only" for = "select">deposite or withdraw</label>
+<label class = "sr-only" for = "deposit_withdraw">deposite or withdraw</label>
      
-      <select name="select" class = "form-control" id = "select">
+      <select name="deposit_withdraw" class = "form-control" id = "deposit_withdraw">
          <option value="">Select Type</option>
          <option value="deposite">deposite</option>
          <option value="withdraw">withdraw</option>

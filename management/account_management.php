@@ -4,7 +4,7 @@
                                 
 								<li><a class="submenu" href="view_account.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Account</span></a></li>
 								
-							<li><a class="submenu" data-toggle = "modal" data-target = "#newDeposite"><i class="icon-file-alt"></i><span class="hidden-tablet">Deposite / Withdraw</span></a></li>
+							<li><a class="submenu" href="new_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Deposite / Withdraw</span></a></li>
                                 
                                  <li><a class="submenu" href="view_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Deposite</span></a></li>
                                  
@@ -55,6 +55,19 @@
       <label class = "sr-only" for = "name">Account No</label>
       <input type = "text" name="account_no" class = "form-control" id = "account_no" placeholder = "Account No">
    </div>
+
+<div class = "form-group">
+
+<label class = "sr-only" for = "select">Select</label>
+     
+      <select name="select" class = "form-control" id = "Type">
+         <option value="">Select Type</option>
+         <option value="deposite">deposite</option>
+         <option value="withdraw">withdraw</option>
+
+      </select>
+   </div>
+
    <div class = "form-group">
       <label class = "sr-only" for = "name">Date</label>
       <input type = "date" name="date" class = "form-control" id = "date" placeholder = "Date">

@@ -12,13 +12,13 @@ extract($_POST);
 
 
 
-$mysqli->query("UPDATE deposite SET account_no='$account_no', 
-	date='$date', tracking_no='$tracking_no',
-	ammount='$ammount') WHERE id='$id'");
+$query=$mysqli->query("UPDATE deposite_withdraw SET account_no='$account_no', 
+deposit_withdraw='$deposit_withdraw', date='$date', tracking_no='$tracking_no',
+ammount='$ammount' WHERE id='$id'");
 
 
-	
-header("location:index.php");
+if($query)	{
+header("location:view_deposite.php");
 
 }
 else{
@@ -26,6 +26,10 @@ else{
 	echo "<h2>Data submit not successfull</h2>";
 }
 
-
+}
 
 ?>
+
+
+
+
