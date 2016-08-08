@@ -419,16 +419,14 @@ require('db_config.php');
   
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
   <thead> 
- <th colspan="3">Deposite Ammount</th>
-      <th colspan="3">Withdraw Ammount</th>
+ <th colspan="4">Account Statement</th>
     </tr>
     <tr>
       <td>Date</td>
+	  <td>Type</>
       <td>Voucher No</td>
       <td>Ammount</td>
-      <td>Date</td>
-      <td>Check No</td>
-      <td>Ammount</td>
+      
     </tr>
  </thead>
  
@@ -439,23 +437,24 @@ require('db_config.php');
  ?>	
 	 <tr>
       <td><?php echo $data['deposite_date']?></td>
+	   <td><?php echo $data['deposit_ammount']?></td>
       <td><?php echo $data['voucher_no']?></td>
       <td><?php echo $data['deposit_ammount']?></td>
-      <td><?php echo $data['withdraw_date']?></td>
-      <td><?php echo $data['check_no']?></td>
-      <td><?php echo $data['withdraw_ammount']?></td>
+      
     </tr>
 				
     <?php } ?>	
     
      <tr>
-      <td colspan="2">Total Deposite:</td>
+      <td colspan="3">Total Deposite:</td>
       <td>Taka</td>
-      <td colspan="2">Total Withdraw:</td>
+	  </tr>
+	  <tr>
+      <td colspan="3">Total Withdraw:</td>
       <td>Taka</td>
     </tr>
     <tr>
-      <td colspan="6"><h3><b>Account Balance:</b><h3></td>
+      <td colspan="4"><h3><b>Account Balance:</b><h3></td>
     </tr>	
                  </tbody>
 				 </table>            
