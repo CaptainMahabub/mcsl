@@ -21,8 +21,10 @@ $mysqli->query("INSERT INTO account_holders VALUES
 
 if($mysqli->affected_rows>0){
 	
-header("location:index.php");
-
+$re=$mysqli->query("SELECT max(account_holder_id) as accountno FROM account_holders");
+$data=$re->fetch_array();
+//print_r($data);
+echo "<h1>Your Account Number is: ".$data['accountno'];
 }
 else{
 	
