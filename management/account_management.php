@@ -8,7 +8,7 @@
                                 
                                  <li><a class="submenu" href="view_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Deposite</span></a></li>
                                  
-                                 <li><a class="submenu" data-toggle = "modal" data-target = "#newWithdraw"><i class="icon-file-alt"></i><span class="hidden-tablet">New Withdraw</span></a></li>
+                                 <li><a class="submenu" href="new_withdraw.php"><i class="icon-file-alt"></i><span class="hidden-tablet">New Withdraw</span></a></li>
                                 
                                  <li><a class="submenu" href="view_withdraw.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Withdraw</span></a></li>
                                  
@@ -26,7 +26,7 @@
 
 
 <!-- New Deposite -->
-<div class = "modal fade" id = "newDeposite" tabindex = "-1" role = "dialog" 
+<!--<div class = "modal fade" id = "newDeposite" tabindex = "-1" role = "dialog" 
    aria-labelledby = "myModalLabel" aria-hidden = "true">
    
    <div class = "modal-dialog">
@@ -99,13 +99,13 @@
       </div>
    </div>
    
-</div> <!--/.modal -->
+</div>--> <!--/.modal -->
 
 
 
 
 <!-- New Withdraw -->
-<div class = "modal fade" id = "newWithdraw" tabindex = "-1" role = "dialog" 
+<!--<div class = "modal fade" id = "newWithdraw" tabindex = "-1" role = "dialog" 
    aria-labelledby = "myModalLabel" aria-hidden = "true">
    
    <div class = "modal-dialog">
@@ -119,9 +119,9 @@
             <h4 class = "modal-title" id = "myModalLabel">
                Add Withdraw
             </h4>
-         </div>
+         </div>-->
          
-         <div class = "modal-body">
+        <!-- <div class = "modal-body">
 <form class = "form-inline" role = "form" name="account_form" method="post" action="submit_withdraw.php" enctype="multipart/form-data">
    
    <div class = "form-group">
@@ -165,7 +165,7 @@
       </div>
    </div>
    
-</div> <!--/.modal -->
+</div> <!--/.modal -->-->
 
 
 

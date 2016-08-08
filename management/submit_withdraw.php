@@ -1,11 +1,9 @@
 <?php
-
+require('db_config.php');
 if($_SERVER['REQUEST_METHOD']=="POST"){
 	
-require('db_config.php');
 //print_r($_FILES);
 extract($_POST);
-
 
 
 $mysqli->query("INSERT INTO withdraw VALUES
@@ -13,7 +11,7 @@ $mysqli->query("INSERT INTO withdraw VALUES
 
 if($mysqli->affected_rows>0){
 	
-header("location:index.php");
+header("location:view_withdraw.php");
 
 }
 else{
