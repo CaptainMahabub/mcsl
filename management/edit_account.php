@@ -1,19 +1,6 @@
 <?php
 require('db_config.php');
-?>
-
-
-<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">Account Management</span>&nbsp; &nbsp;<span class="label label-important"> 4 </span></a>
-							<ul>
-								<li><a class="submenu" data-toggle = "modal" data-target = "#editAccount"><i class="icon-file-alt"></i><span class="hidden-tablet"> Edit Account</span></a></li>
-                                
-                                
-								<!--<li><a class="submenu" href="view_account.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Account</span></a></li>-->
-                               
-							</ul>	
-                            
-                            
-                            
+?>                         
 <?php
 $id = $_GET['id'];
 $row = $mysqli->query("SELECT * FROM account_holders WHERE account_holder_id = '$id'");
@@ -21,25 +8,7 @@ $data = $row->fetch_array();
 
 ?>
 
-<!-- Edit Account -->
-<div class = "modal fade" id = "editAccount" tabindex = "-1" role = "dialog" 
-   aria-labelledby = "myModalLabel" aria-hidden = "true">
-   
-   <div class = "modal-dialog">
-      <div class = "modal-content">
-         
-         <div class = "modal-header">
-            <button type = "button" class = "close" data-dismiss = "modal" aria-hidden = "true">
-               
-            </button>
-            
-            <h4 class = "modal-title" id = "myModalLabel">
-               Edit Account 
-            </h4>
-         </div>
-         
-         <div class = "modal-body">
-<form class = "form-inline" role = "form" name="account_form" method="post" action="update_account.php">
+<form class = "form-inline" role = "form" name="account_form" method="post" action="update_account.php" enctype="multipart/form-data">
    
    <div class = "form-group">
       <label class = "sr-only" for = "id"></label>
@@ -63,7 +32,6 @@ $data = $row->fetch_array();
    </div>
    <div class = "form-group">
       <label class = "sr-only" for = "name">Gender</label>
-      <!--<input type = "text" name="gender" class = "form-control" id = "name" placeholder = "Gender">-->
       <input type="radio" name="gender" value="female">Female       
       <input type="radio" name="gender" value="male">Male
    </div>
@@ -105,7 +73,7 @@ $data = $row->fetch_array();
    </div>
    
    <div class = "form-group">
-      <label class = "sr-only" for = "photo">File input</label>
+      <label class = "sr-only" for = "photo">Photo</label>
       <input type = "file" name="photo" id = "photo">
    </div>
    <div class = "form-group">
@@ -113,25 +81,3 @@ $data = $row->fetch_array();
    </div>
    
 </form>
-         </div>
-         
-         <div class = "modal-footer">
-            <button type = "button" class = "btn btn-default" data-dismiss = "modal">
-               Close
-            </button>
-            
-            
-         </div>
-         
-      </div><!-- /.modal-content -->
-   </div><!-- /.modal-dialog -->
-   
-</div><!-- /.modal -->
-
-
-
-<script>
-   $(function () { $('#editAccount').modal({
-      keyboard: true
-   })});
-</script>
