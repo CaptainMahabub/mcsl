@@ -416,19 +416,19 @@ require('db_config.php');
     </div>
     <input type="submit" name="submit" value="View Instalment Calculation" class="btn btn-primary">
   </form>
-  
+<?php if(isset($_POST['submit'])){
+ 	extract($_POST);
+ 	//print_r($_POST);
+ 	$qu=$mysqli->query("SELECT * FROM new_loan WHERE account_no='$account_no'");
+ 	$data=$qu->fetch_array();
+?>  
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
   <thead> 
  <tr>
       <th colspan="2">Instalment Calculation</th>
     </tr>
  </thead>
- <?php if(isset($_POST['submit'])){
- 	extract($_POST);
- 	//print_r($_POST);
- 	$qu=$mysqli->query("SELECT * FROM new_loan WHERE account_no='$account_no'");
- 	$data=$qu->fetch_array();
- 	} ?>
+ 
  <tbody>
  <tr>
       <td>Name:</td>
@@ -467,7 +467,7 @@ require('db_config.php');
     </tr>
     <tr>
       <td>Total Instalment:</td>
-      <td><?php echo $data['installment']; ?></td>
+      <td><?php echo $data['installment']; }?></td>
     </tr>
    </tbody>
 	 </table>            
