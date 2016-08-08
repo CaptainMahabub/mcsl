@@ -397,26 +397,29 @@
 				<li><a href="#">Loan Statement</a></li>
 			</ul>
 
-	<?php
-require('db_config.php');
- $sql =	"SELECT * FROM installment_deposite";
- $result = mysqli_query($mysqli,$sql);
- ?>		
-			
 
 <div class="box-content">
 <div class="row">
 <div class="col-lg-8">
 <h1>Loan Statement</h1>
 
-<form class="form-inline" role="form">
+<form class="form-inline" role="form" method="post">
     <div class="form-group">
       <h2>Account No:</h2>
-      <input type="text" class="form-control" id="account_no" placeholder="Enter Account Number">
+      <input type="text" class="form-control" name="account_no" id="account_no" placeholder="Enter Account Number">
     </div>
-    <button type="submit" class="btn btn-info">View Loan Statement</button>
+    <button type="submit" name="submit" class="btn btn-info">View Loan Statement</button>
   </form>
-  
+ 	<?php
+require('db_config.php');
+if(isset($_POST['submit'])){
+extract($_POST);
+ $sql =	"SELECT * FROM installment_deposite WHERE account_no='$account_no'";
+ $result = mysqli_query($mysqli,$sql);
+ $res=$mysqli->query("SELECT account_holder_id, account_holder_name FROM account_holders WHERE account_holder_id='$account_no'");
+ $accname=$res->fetch_array();
+ ?>		
+<h3 align="center">Account Holder Name: <?php echo $accname['account_holder_name'] ?></h3>			 
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
   <thead> 
  <th colspan="4">Deposite Loan</th>
@@ -447,17 +450,27 @@ require('db_config.php');
     
      <tr>
       <td colspan="3">Total Deposite Loan:</td>
-      <td>Taka</td>
+      <td><?php 
+      $sum=$mysqli->query("SELECT account_no, amount, SUM(amount) as sum_amount FROM installment_deposite WHERE account_no='$account_no'");
+      $sumDe=$sum->fetch_array();
+      echo "<b>".$sumDe['sum_amount']."</b>";
+       ?> Taka</td>
     </tr>
 	<tr>
-      <td colspan="3">Total Loan Ammount:</td>
-      <td>Taka</td>
+      <td colspan="3">Total Payable Loan Ammount:</td>
+      <td><?php 
+      $qq=$mysqli->query("SELECT account_no, interest_amount, loan_amount FROM new_loan WHERE account_no='$account_no'");
+      $pa=$qq->fetch_array();
+      $payable=($pa['loan_amount']+$pa['interest_amount']);
+      echo "<b>".$payable."</b>";
+       ?> Taka</td>
     </tr>
     <tr>
-      <td colspan="4"><h3><b>Loan Due:</b><h3></td>
+      <td colspan="4"><h3><b>Due Loan Amount: <?php $due=($payable-$sumDe['sum_amount']);echo "<b>".$due."</b>"; ?> Taka</b><h3></td>
     </tr>	
                  </tbody>
-				 </table>            
+				 </table> 
+				 <?php } ?>           
 </div>
 </div>
 
