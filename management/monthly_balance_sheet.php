@@ -409,14 +409,30 @@ require('db_config.php');
 <div class="col-lg-8">
 <h1>Monthly Balance Sheet</h1>
 
-<form class="form-inline" role="form">
+<form class="form-inline" role="form" method="post">
     <div class="form-group">
-      <h2>Select Month:</h2>
-      <input type="text" class="form-control" id="account_no" placeholder="Enter Account Number">
+      <h3>Select Month:</h3>
+      <select name="month">
+      	<option value="">Select Month</option>
+      	<option value="january">January</option>
+      	<option value="february">February</option>
+      	<option value="march">March</option>
+      	<option value="april">April</option>
+      	<option value="may">May</option>
+      	<option value="june">June</option>
+      	<option value="july">July</option>
+      	<option value="august">August</option>
+      	<option value="september">September</option>
+      	<option value="october">October</option>
+      	<option value="november">November</option>
+      	<option value="december">December</option>
+      </select>
+      
     </div>
-    <button type="submit" class="btn btn-primary">View Balance Sheet</button>
+    <input type="submit" name="submit" class="btn btn-primary" value="View Balance Sheet">
   </form>
-  
+ <h3 align="center"><?php if(isset($_POST['submit'])){
+ extract($_POST); echo "Month: ".ucfirst($month); ?></h3> 
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
   <thead> 
  <tr>
@@ -425,10 +441,6 @@ require('db_config.php');
  </thead>
  
  <tbody>
- <tr>
-      <td>Branch Address:</td>
-      <td>&nbsp;</td>
-    </tr>
  <tr>
       <td>New Account Holder:</td>
       <td>&nbsp;</td>
@@ -454,7 +466,8 @@ require('db_config.php');
       <td>&nbsp;</td>
     </tr>
                  </tbody>
-				 </table>            
+				 </table> 
+				 <?php } ?>           
 </div>
 </div>
 
