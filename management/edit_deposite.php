@@ -13,49 +13,64 @@ $data = $row->fetch_array();
 
 <h2>Edit Deposite</h2>
 
+
+
 <form class = "form-inline" role = "form" name="account_form" method="post" action="update_deposite.php" enctype="multipart/form-data">
-   
+   <table border="2px">
                             
 <div class = "form-group">
+
       <label class = "sr-only" for = "id"></label>
       <input type = "hidden" name="id" class = "form-control" id = "id" value = "<?php echo $id;?>">
    </div>
    
    
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Account No</label>
-      <input type = "text" name="account_no" class = "form-control" id = "account_no" placeholder = "Account No" value="<?php echo $data['account_no'] ?>">
+      <tr>
+      <th><label class = "sr-only" for = "name">Account No</label></th>
+      <td>
+      <input type = "text" name="account_no" class = "form-control" id = "account_no" placeholder = "Account No" value="<?php echo $data['account_no'] ?>"></td></tr>
    </div>
    
      
 
 <div class = "form-group">
 
-<label class = "sr-only" for = "deposit_withdraw">deposite or withdraw</label>
+<tr>
+      <th><label class = "sr-only" for = "deposit_withdraw" data-toggle="dropdown">deposite or withdraw</label></th>
+      <td>
      
       <select name="deposit_withdraw" class = "form-control" id = "deposit_withdraw" value="<?php echo $data['deposite_or_withdraw'] ?>">
          <option value="">Select Type</option>
          <option value="deposite">deposite</option>
          <option value="withdraw">withdraw</option>
 
-      </select>
+      </select></td></tr>
    </div>
 
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Date</label>
-      <input type = "date" name="date" class = "form-control" id = "date" placeholder = "Date" value="<?php echo $data['date'] ?>">
+      <tr>
+      <th><label class = "sr-only" for = "name">Date</label></th>
+      <td>
+      <input type = "date" name="date" class = "form-control" id = "date" placeholder = "Date" value="<?php echo $data['date'] ?>"></td></tr>
    </div>
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Tracking Number</label>
-      <input type = "text" name="tracking_no" class = "form-control" id = "tracking_no" placeholder = "Tracking Number" value="<?php echo $data['tracking_no'] ?>">
+      <tr>
+      <th><label class = "sr-only" for = "name">Tracking Number</label></th>
+      <td>
+      <input type = "text" name="tracking_no" class = "form-control" id = "tracking_no" placeholder = "Tracking Number" value="<?php echo $data['tracking_no'] ?>"></td></tr>
    </div>
    <div class = "form-group">
-      <label class = "sr-only" for = "name">Ammount</label>
-      <input type="text" name="ammount" class = "form-control" id = "ammount" placeholder = "Ammount" value="<?php echo $data['ammount'] ?>">
+      <tr>
+      <th><label class = "sr-only" for = "name">Ammount</label></th>
+      <td>
+      <input type="text" name="ammount" class = "form-control" id = "ammount" placeholder = "Ammount" value="<?php echo $data['ammount'] ?>"></td></tr>
    </div>
    
    <div class = "form-group">
-      <input class="btn btn-primary" type="submit" name="update" value="Update">
+      <tr>
+      <th><input class="btn btn-primary" type="submit" name="update" value="Update"></th>
+      <td></td></tr>
    </div>
 
    
