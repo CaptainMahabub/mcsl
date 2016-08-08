@@ -6,13 +6,8 @@
 								
 							<li><a class="submenu" href="new_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Deposite / Withdraw</span></a></li>
                                 
-                                 <li><a class="submenu" href="view_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Deposite</span></a></li>
-                                 
-                                 <li><a class="submenu" href="new_withdraw.php"><i class="icon-file-alt"></i><span class="hidden-tablet">New Withdraw</span></a></li>
-                                
-                                 <li><a class="submenu" href="view_withdraw.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> View Withdraw</span></a></li>
-                                 
-                                 
+                                 <li><a class="submenu" href="view_deposite.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Manage Deposite / Withdraw</span></a></li>
+                                                                
                             <li><a class="submenu" href="account_statement.php"><i class="icon-file-alt"></i><span class="hidden-tablet">Statement</span></a></li>
                                 
                                 
@@ -179,11 +174,7 @@
 
 
 
-<script>
-   $(function () { $('#newDeposite').modal({
-      keyboard: true
-   })});
-</script>
+
 
 
 
