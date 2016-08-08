@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2016 at 11:59 AM
+-- Generation Time: Aug 08, 2016 at 01:25 PM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -31,6 +31,7 @@ CREATE TABLE `new_loan` (
   `account_no` varchar(50) NOT NULL,
   `date` date NOT NULL,
   `loan_amount` varchar(50) NOT NULL,
+  `interest_amount` int(20) NOT NULL,
   `installment` varchar(50) NOT NULL,
   `grantors` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -39,9 +40,8 @@ CREATE TABLE `new_loan` (
 -- Dumping data for table `new_loan`
 --
 
-INSERT INTO `new_loan` (`newloan_id`, `account_no`, `date`, `loan_amount`, `installment`, `grantors`) VALUES
-(1, '111455', '2016-08-04', '600000', '6', 'Wasrer'),
-(3, '123456', '2016-08-08', '800000', '6', 'Clinton');
+INSERT INTO `new_loan` (`newloan_id`, `account_no`, `date`, `loan_amount`, `interest_amount`, `installment`, `grantors`) VALUES
+(4, '11112', '2016-08-08', '50000', 7500, '36', 'Mahabub');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +61,7 @@ ALTER TABLE `new_loan`
 -- AUTO_INCREMENT for table `new_loan`
 --
 ALTER TABLE `new_loan`
-  MODIFY `newloan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `newloan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
