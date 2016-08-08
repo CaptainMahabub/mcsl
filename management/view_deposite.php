@@ -399,7 +399,7 @@
 
 	<?php
 require('db_config.php');
- $sql =	"SELECT * FROM deposite";
+ $sql =	"SELECT * FROM deposite_withdraw";
  $result = mysqli_query($mysqli,$sql);
  ?>		
 			
@@ -416,7 +416,7 @@ require('db_config.php');
   
  <div class="box-content">
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
-                        <thead><tr><th width="4%">ID</th><th width="7%">Account No</th><th width="9%">Date</th><th width="9%">Tracking Number </th><th width="9%">Ammount</th>
+                        <thead><tr><th width="4%">ID</th><th width="7%">Account No</th><th>deposite_or_withdraw</th><th width="9%">Date</th><th width="9%">Tracking Number </th><th width="9%">Ammount</th>
  <th width="14%">Actions</th></tr></thead>
 
  
@@ -425,10 +425,12 @@ require('db_config.php');
 	 
  ?>	
 
+
 	<tbody>
 	 <tr>
      <td><?php echo $data['id']?></td>
      <td><?php echo $data['account_no']?></td>
+      <td><?php echo $data['deposite_or_withdraw']?></td>
      
 	  <td><?php echo $data['date']?></td>
 	   <td><?php echo $data['tracking_no']?></td>
