@@ -14,12 +14,11 @@ $data = $row->fetch_array();
    
                             
                             
-                            
-
+  
 
 <div class = "form-group">
       <label class = "sr-only" for = "id"></label>
-      <input type = "hidden" name="id" class = "form-control" id = "id">
+      <input type = "hidden" name="id" class = "form-control" id = "id" value = "<?php echo $id;?>">
    </div>
    
    
@@ -27,12 +26,14 @@ $data = $row->fetch_array();
       <label class = "sr-only" for = "name">Account No</label>
       <input type = "text" name="account_no" class = "form-control" id = "account_no" placeholder = "Account No" value="<?php echo $data['account_no'] ?>">
    </div>
+   
+     
 
 <div class = "form-group">
 
 <label class = "sr-only" for = "deposit_withdraw">deposite or withdraw</label>
      
-      <select name="deposit_withdraw" class = "form-control" id = "deposit_withdraw">
+      <select name="deposit_withdraw" class = "form-control" id = "deposit_withdraw" value="<?php echo $data['deposite_or_withdraw'] ?>">
          <option value="">Select Type</option>
          <option value="deposite">deposite</option>
          <option value="withdraw">withdraw</option>

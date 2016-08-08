@@ -11,9 +11,8 @@ if(isset($_POST['update'])){
 extract($_POST);
 
 
-
 $query=$mysqli->query("UPDATE deposite_withdraw SET account_no='$account_no', 
-deposit_withdraw='$deposit_withdraw', date='$date', tracking_no='$tracking_no',
+deposite_or_withdraw='$deposit_withdraw', date='$date', tracking_no='$tracking_no',
 ammount='$ammount' WHERE id='$id'");
 
 
@@ -29,6 +28,9 @@ else{
 }
 
 ?>
+
+
+
 
 
 
