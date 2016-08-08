@@ -417,16 +417,20 @@
 <div class = "form-group">
 
 <tr>
-      <th><label class = "sr-only" for = "deposit_withdraw">deposite or withdraw</label></th>
+      <th><label class = "sr-only" for = "deposit_withdraw" data-toggle="dropdown">deposite or withdraw</label></th>
       <td>
      
-      <select name="deposit_withdraw" class = "form-control" id = "deposit_withdraw">
+      <select name="deposit_withdraw" class = "form-control" id = "deposit_withdraw"  >
          <option value="">Select Type</option>
          <option value="deposite">deposite</option>
          <option value="withdraw">withdraw</option>
 
       </select></td></tr>
    </div>
+   
+   
+   
+   
 
    <div class = "form-group">
    
