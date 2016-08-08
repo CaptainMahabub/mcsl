@@ -397,11 +397,7 @@
 				<li><a href="#">Account Statement</a></li>
 			</ul>
 
-	<?php
-require('db_config.php');
- $sql =	"SELECT * FROM account_statement";
- $result = mysqli_query($mysqli,$sql);
- ?>		
+		
 			
 
 <div class="box-content">
@@ -409,21 +405,26 @@ require('db_config.php');
 <div class="col-lg-8">
 <h1>Account Statement</h1>
 
-<form class="form-inline" role="form">
+<form class="form-inline" role="form" method="post">
     <div class="form-group">
       <h2>Account No:</h2>
-      <input type="text" class="form-control" id="account_no" placeholder="Enter Account Number">
+      <input type="text" class="form-control" name="account_no" id="account_no" placeholder="Enter Account Number">
     </div>
-    <button type="submit" class="btn btn-info">View Statement</button>
+    <button type="submit" name="submit" class="btn btn-info">View Statement</button>
   </form>
-  
+ <?php
+require('db_config.php');
+extract($_POST);
+ $sql =	"SELECT * FROM deposite_withdraw WHERE account_no='$account_no'";
+ $result = mysqli_query($mysqli,$sql);
+ ?>
  <table border="2" class="table table-responsive table-bordered bootstrap-datatable datatable">
   <thead> 
  <th colspan="4">Account Statement</th>
     </tr>
     <tr>
       <td>Date</td>
-	  <td>Type</>
+	  <td>Type</td>
       <td>Voucher No</td>
       <td>Ammount</td>
       
@@ -436,10 +437,10 @@ require('db_config.php');
 	 
  ?>	
 	 <tr>
-      <td><?php echo $data['deposite_date']?></td>
-	   <td><?php echo $data['deposit_ammount']?></td>
-      <td><?php echo $data['voucher_no']?></td>
-      <td><?php echo $data['deposit_ammount']?></td>
+      <td><?php echo $data['date']?></td>
+	   <td><?php echo $data['deposite_or_withdraw']?></td>
+      <td><?php echo $data['tracking_no']?></td>
+      <td><?php echo $data['ammount']?></td>
       
     </tr>
 				
