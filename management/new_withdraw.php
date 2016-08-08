@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +23,34 @@
 	<!-- end: CSS -->
 	
 
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>KIRON - Keen Improvement Reflection For Original Needy</title>
+	<meta name="description" content="Bootstrap Metro Dashboard">
+	<meta name="author" content="Dennis Ji">
+	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+	
+
+=======
+>>>>>>> origin/master
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,6 +71,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 		<!-- start: Header -->
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -493,11 +521,65 @@
 	</div>
 	
 	<div class="clearfix"></div>
+=======
+		<h2>Example of using methods of Modal Plugin</h2>
+
+<!-- Button trigger modal -->
+<button class = "btn btn-primary btn-lg" data-toggle = "modal" data-target = "#myModal">
+   Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class = "modal fade" id = "myModal" tabindex = "-1" role = "dialog" 
+   aria-labelledby = "myModalLabel" aria-hidden = "true">
+   
+   <div class = "modal-dialog">
+      <div class = "modal-content">
+         
+         <div class = "modal-header">
+            <button type = "button" class = "close" data-dismiss = "modal" aria-hidden = "true">
+               ×
+            </button>
+            
+            <h4 class = "modal-title" id = "myModalLabel">
+               This Modal title
+            </h4>
+         </div>
+         
+         <div class = "modal-body">
+            Press ESC button to exit.
+         </div>
+         
+         <div class = "modal-footer">
+            <button type = "button" class = "btn btn-default" data-dismiss = "modal">
+               Close
+            </button>
+            
+            <button type = "button" class = "btn btn-primary">
+               Submit changes
+            </button>
+         </div>
+         
+      </div><!-- /.modal-content -->
+   </div><!-- /.modal-dialog -->
+   
+</div><!-- /.modal -->
+
+<script>
+   $(function () { $('#myModal').modal({
+      keyboard: true
+   })});
+</script>
+>>>>>>> origin/master
 	
 	<footer>
 
 		<p>
+<<<<<<< HEAD
 			<span style="text-align:left;float:left">&copy; 2013 <a href="http://jiji262.github.io/Bootstrap_Metro_Dashboard/" alt="Bootstrap_Metro_Dashboard">Bootstrap Metro Dashboard</a></span>
+=======
+<span style="text-align:left;float:left">&copy; <?php echo date('Y'); ?> <a href="http://www.wpsi-developers.com/" alt="IBCS-PRIMAX, WPSI, Round-26">IBCS-PRIMAX, WPSI, Round-26, Discovery Group</a></span>
+>>>>>>> origin/master
 			
 		</p>
 
@@ -563,4 +645,7 @@
 	
 </body>
 </html>
+<<<<<<< HEAD
          
+=======
+>>>>>>> origin/master
