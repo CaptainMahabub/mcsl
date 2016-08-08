@@ -250,7 +250,7 @@
 										<span class="header">
 											<span class="from">
 										    	Dennis Ji
-										     </span>
+										    </span>
 											<span class="time">
 										    	3 hours
 										    </span>
@@ -401,7 +401,11 @@
 				
 				<div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
 					<div class="boxchart">5,6,7,2,0,4,2,4,8,2,3,3,2</div>
-					<div class="number">854<i class="icon-arrow-up"></i></div>
+					<div class="number"><?php include("db_config.php");
+					$qu=$mysqli->query("SELECT account_holder_id FROM account_holders");
+					$res=$qu->fetch_array();
+					echo $qu->num_rows;
+					 ?><i class="icon-arrow-up"></i></div>
 					<div class="title">Total</div>
 					<div class="footer">
 						<a href="#"> Account Holders</a>
@@ -409,7 +413,11 @@
 				</div>
 				<div class="span3 statbox green" onTablet="span6" onDesktop="span3">
 					<div class="boxchart">1,2,6,4,0,8,2,4,5,3,1,7,5</div>
-					<div class="number">123<i class="icon-arrow-up"></i></div>
+					<div class="number"><?php
+					$qu=$mysqli->query("SELECT newloan_id FROM new_loan");
+					$res=$qu->fetch_array();
+					echo $qu->num_rows;
+					 ?><i class="icon-arrow-up"></i></div>
 					<div class="title">Total</div>
 					<div class="footer">
 						<a href="#"> Loan Holders</a>
@@ -417,7 +425,11 @@
 				</div>
 				<div class="span3 statbox blue noMargin" onTablet="span6" onDesktop="span3">
 					<div class="boxchart">5,6,7,2,0,-4,-2,4,8,2,3,3,2</div>
-					<div class="number">982<i class="icon-arrow-up"></i></div>
+					<div class="number"><?php
+					$qu=$mysqli->query("SELECT employee_id FROM employees");
+					$res=$qu->fetch_array();
+					echo $qu->num_rows;
+					 ?><i class="icon-arrow-up"></i></div>
 					<div class="title">Total</div>
 					<div class="footer">
 						<a href="#"> Office Employee</a>
@@ -425,7 +437,11 @@
 				</div>
 				<div class="span3 statbox yellow" onTablet="span6" onDesktop="span3">
 					<div class="boxchart">7,2,2,2,1,-4,-2,4,8,,0,3,3,5</div>
-					<div class="number">678<i class="icon-arrow-down"></i></div>
+					<div class="number"><?php
+					$qu=$mysqli->query("SELECT branch_id FROM branchs");
+					$res=$qu->fetch_array();
+					echo $qu->num_rows;
+					 ?><i class="icon-arrow-down"></i></div>
 					<div class="title">Total</div>
 					<div class="footer">
 						<a href="#"> Branch Office</a>

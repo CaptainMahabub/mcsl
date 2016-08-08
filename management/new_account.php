@@ -52,7 +52,6 @@
    </div>
    <div class = "form-group">
       <label class = "sr-only" for = "address">Address</label>
-      <!--<input type = "text" name="address" class = "form-control" id = "name" placeholder = "Address">-->
       <textarea name="address" class = "form-control" id = "address" placeholder="Enter Address"></textarea>
    </div>
    <div class = "form-group">
