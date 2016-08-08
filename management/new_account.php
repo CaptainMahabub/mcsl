@@ -404,7 +404,7 @@
 
 <form class = "form-inline" role = "form" name="account_form" method="post" action="submit_account.php" enctype="multipart/form-data">
    
-  <table border="2px"> 
+  <table border="0"> 
   
  <div class = "form-group">
       <label for = "id"></label>
@@ -417,32 +417,32 @@
    
    
    <tr>
-      <th> <label class = "sr-only" for = "name">Name</label></th>
+      <td> <label class = "sr-only" for = "name">Name</label></td>
       <td><input type = "text" name="name" class = "form-control" id = "name" placeholder = "Enter Name"></td></tr>
    </div>
    
    <div class = "form-group">
    
-     <tr><th> <label class = "sr-only" for = "name">Father's Name</label></th>
+     <tr><td> <label class = "sr-only" for = "name">Father's Name</label></td>
       <td><input type = "text" name="fathersname" class = "form-control" id = "name" placeholder = "Father's Name" ></td></tr>
    </div>
    <div class = "form-group">
    
-     <tr><th><label class = "sr-only" for = "name">Mother's Name</label></th>
+     <tr><td><label class = "sr-only" for = "name">Mother's Name</label></td>
       <td>
       <input type = "text" name="mothersname" class = "form-control" id = "name" placeholder = "Mother's Name" ></td></tr>
    </div>
    <div class = "form-group">
    
    
-      <tr><th><label class = "sr-only" for = "name">Birth Date</label></th>
+      <tr><td><label class = "sr-only" for = "name">Birth Date</label></td>
       <td>
       <input type="date" name="birthdate" class = "form-control" id = "name" placeholder = "Birth Date" ></td></tr>
    </div>
    <div class = "form-group">
    
    
-      <tr><th><label class = "sr-only" for = "name">Gender</label></th>
+      <tr><td><label class = "sr-only" for = "name">Gender</label></td>
       <td>
       <input type="radio" name="gender" value="female">Female  <br/>     
       <input type="radio" name="gender" value="male">Male</td></tr>
@@ -450,39 +450,39 @@
    <div class = "form-group">
    
    
-      <tr><th><label class = "sr-only" for = "name">Mobile No</label></th>
+      <tr><td><label class = "sr-only" for = "name">Mobile No</label></td>
       <td>
       <input type="text" name="mobile" class = "form-control" id = "name" placeholder = "Mobile No" ></td></tr>
    </div>
    <div class = "form-group">
    
    
-      <tr><th><label class = "sr-only" for = "name">E-mail</label></th>
+      <tr><td><label class = "sr-only" for = "name">E-mail</label></td>
       <td>
       <input type="email" name="email" class = "form-control" id = "name" placeholder = "E-mail" ></td></tr>
    </div>
    <div class = "form-group">
    
    
-      <tr><th><label class = "sr-only" for = "name">NID Number</label></th>
+      <tr><td><label class = "sr-only" for = "name">NID Number</label></td>
       <td>
-      <input type"number" name="nid" class = "form-control" id = "name" placeholder = "NID Number" ></td></tr>
+      <input type="number" name="nid" class = "form-control" id = "name" placeholder = "NID Number" ></td></tr>
    </div>
    <div class = "form-group">
-     <tr><th> <label class = "sr-only" for = "name">Account Type</label></th>
+     <tr><td> <label class = "sr-only" for = "name">Account Type</label></td>
       <td>
       <input type = "text" name="accountType" class = "form-control" id = "name" placeholder = "Account Type" ></td></tr>
    </div>
    <div class = "form-group">
    
    
-     <tr><th> <label class = "sr-only" for = "name">Primary Deposit</label></th>
+     <tr><td> <label class = "sr-only" for = "name">Primary Deposit</label></td>
       <td>
       <input type = "text" name="primaryDeposite" class = "form-control" id = "" ></td></tr></div>
    <div class = "form-group">
    
    
-      <tr><th><label class = "sr-only" for = "name">Address</label></th>
+      <tr><td><label class = "sr-only" for = "name">Address</label></td>
       <td>
       <!--<input type = "text" name="address" class = "form-control" id = "name" placeholder = "Address">-->
       <textarea name="address" class = "form-control" id = "name" placeholder="Enter Address" ></textarea></td></tr>
@@ -490,20 +490,20 @@
    <div class = "form-group">
    
    
-      <tr><th><label class = "sr-only" for = "name">Branch</label></th>
+      <tr><td><label class = "sr-only" for = "name">Branch</label></td>
       <td>
       <input type = "text" name="brunch" class = "form-control" id = "name" placeholder = "Branch" ></td></tr>
    </div>
    <div class = "form-group">
    
-     <tr><th> <label class = "sr-only" for = "name">Verifier</label></th>
+     <tr><td> <label class = "sr-only" for = "name">Verifier</label></td>
       <td>
       <input type = "text" name="verifier" class = "form-control" id = "name" placeholder = "Verifier" ></td></tr>
    </div>
    <div class = "form-group">
    
    
-     <tr><th> <label class = "sr-only" for = "name">Nominee</label></th>
+     <tr><td> <label class = "sr-only" for = "name">Nominee</label></td>
       <td>
       <input type = "text" name="nominee" class = "form-control" id = "name" placeholder = "Nominee" ></td></tr>
    </div>
@@ -511,15 +511,15 @@
    <div class = "form-group">
    
    
-     <tr><th> <label class = "sr-only" for = "photo">Photo</label></th>
+     <tr><td> <label class = "sr-only" for = "photo">Photo</label></td>
       <td>
       <input type = "file" name="photo" id = "photo"></td></tr>
    </div>
    <div class = "form-group">
    
-   <tr><th>
-      <input class="btn btn-primary" type="submit" name="" value="Submit"></th>
-      <td></td></tr>
+   <tr><td>
+      </td>
+      <td><input class="btn btn-primary" type="submit" name="" value="Submit"></td></tr>
    </div>
    </table>
    
