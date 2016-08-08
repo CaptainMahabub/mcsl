@@ -34,3 +34,7 @@ else{
 }
 
 ?>
+
+<br/><br/>
+
+<a href="view_account.php"> Show Data</a>
