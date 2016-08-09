@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2016 at 02:39 PM
+-- Generation Time: Aug 09, 2016 at 05:46 AM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -50,8 +50,6 @@ CREATE TABLE `account_holders` (
 --
 
 INSERT INTO `account_holders` (`account_holder_id`, `account_holder_name`, `account_holder_fathersname`, `account_holder_mothersname`, `account_holder_birthdate`, `gender_type`, `account_holder_mobile`, `account_holder_email`, `document_number`, `account_type_name`, `primar_savings_amount`, `account_holder_present_address`, `branch_name`, `verifier_name`, `nominee_name`, `account_holder_photo`) VALUES
-(11111, 'Mahabub', 'Mahabub', 'Mahabub', '2001-09-24', 'male', 1234567, 's@gmail.com', '46546465', 'saving', 500, 'mirpur', 'dhaka', 'mizan', 'mizan', 'yes'),
-(11112, 'Mamun Malik', 'sds', 'dss', '2016-08-01', 'dss', 0, 'dss', 'dss', 'dss', 0, 'sds', 'dss', 'dss', 'sds', 'photopath'),
 (11113, 'dfgddfgd', 'fdg', 'fdg', '2016-08-02', 'male', 93498546, 'jj@gmail.com', '456575457658678', 'dfgdfh', 0, 'dytryrt', 'dgd', 'dgdg', 'dfgd', 'photopath'),
 (11114, '', '', '', '2016-07-31', 'male', 0, '', '', '', 0, '', '', '', '', 'photopath'),
 (11115, '', '', '', '2016-08-01', 'male', 0, '', '', '', 0, '', '', '', '', 'photopath'),
@@ -67,7 +65,11 @@ INSERT INTO `account_holders` (`account_holder_id`, `account_holder_name`, `acco
 (11125, '', '', '', '0000-00-00', 'male', 0, 'gds@gmail.com', '', '', 0, '', '', '', '', 'img/account_holder/_09K0400.jpg'),
 (11126, '', '', '', '2016-08-02', 'male', 0, 'dd@gmail.com', '', '', 0, '', '', '', '', 'img/account_holder/9-headboard-detail.jpg'),
 (11127, 'kgk', 'utytey', 'klkj', '2016-08-21', 'male', 2147483647, 'hh@gmail.com', '6537598078676', 'kjkjh', 0, '', '', '', '', 'img/account_holder/ashrafuzzaman_fc1072da.png'),
-(11128, '', '', '', '0000-00-00', '', 0, '', '', '', 0, '', '', '', '', 'img/account_holder/');
+(11128, '', '', '', '0000-00-00', '', 0, '', '', '', 0, '', '', '', '', 'img/account_holder/'),
+(11129, 'rr', 'rr', 'rr', '2016-01-01', 'femal', 43243, '', '32423', '32423', 32432, '432423', '324432', '32432', '32432', 'img/account_holder/13901837_10154188010270339_1556'),
+(11130, 'asdas', 'sadsa', 'sadas', '2016-01-01', 'male', 312312, 'mcsl@gmail.com', '21312', 'Savings', 500, 'dsadsad', 'dhaka', 'wewew', 'wew', 'img/account_holder/12802779_838101719652348_783013'),
+(11131, 'Soleman', 'k', 'k', '2016-01-31', 'male', 2, '', '2', 'Savings', 500, 'kk', 'kk', 'lll', 'jjj', 'img/account_holder/12802779_838101719652348_783013'),
+(11132, 'f', 'f', 'f', '0000-00-00', 'femal', 6, '', '5', 'FIxed Deposite', 50000, 'dd', 'dd', 'dd', 'dd', 'img/account_holder/IMG_20160515_171043.JPG');
 
 -- --------------------------------------------------------
 
@@ -248,7 +250,10 @@ INSERT INTO `deposite_withdraw` (`id`, `account_no`, `deposite_or_withdraw`, `da
 (6, '11111', 'withdraw', '2016-08-04', '15154', '10000'),
 (7, '11111', 'deposite', '2016-08-04', '5664', '7000'),
 (8, '11112', 'deposite', '2016-08-01', '46454', '16400'),
-(9, '11112', 'withdraw', '2016-08-02', '54545', '4500');
+(9, '11112', 'withdraw', '2016-08-02', '54545', '4500'),
+(10, '11131', 'deposite', '2016-08-09', '555', '1000'),
+(11, '11131', 'deposite', '2016-08-10', '852', '2000'),
+(12, '11131', 'withdraw', '2016-08-11', '69852', '500');
 
 -- --------------------------------------------------------
 
@@ -326,7 +331,8 @@ INSERT INTO `employees` (`employee_id`, `employee_name`, `employee_fathers_name`
 (3, 'Sena', 'Ali khan', 'sdf', '0000-00-00', 'Male', '76898089', 'asmaumaiya@gmail.com', '568799', 'ddfgfh', '0000-00-00', 'Manager', 29000, 'img/employee/picture.jpg'),
 (4, 'ere', 'errete', 'wertwet', '1990-09-09', 'Male', '5686787978', 'asmaumaiya@gmail.com', '567878989', 'dsfrdg', '2016-09-09', 'Manager', 30000, 'img/employee/picture.jpg'),
 (5, 'fghfg', 'fghfgh', 'gfhfgh', '1988-09-09', 'Female', '5678787980', 'aspi87@yahoo.com', '567879879980', 'vcbvbnb', '2016-09-09', 'fvbfb', 565878, 'img/employee/bridal-hijab-styles-8.jpg'),
-(6, '', '', 'Malisah', '2016-08-03', 'male', '1231214234', 'asd@gmail.com', '234354657', 'Khulshi', '2016-08-01', 'Staff', 15000, 'img/employee/business_woman_FINAL.jpg');
+(6, '', '', 'Malisah', '2016-08-03', 'male', '1231214234', 'asd@gmail.com', '234354657', 'Khulshi', '2016-08-01', 'Staff', 15000, 'img/employee/business_woman_FINAL.jpg'),
+(7, 'kader', 'k', 'k', '0000-00-00', 'male', '5', '', '55', 'kk', '2016-01-01', 'manager', 12000, 'img/employee/pic 3  (4) (1).jpg');
 
 -- --------------------------------------------------------
 
@@ -357,7 +363,12 @@ INSERT INTO `employee_salary` (`salary_id`, `employee_id`, `month_name`, `year_n
 (7, 0, 'February', 2016, 34000, '2016-08-03 06:51:36'),
 (8, 0, 'janu', 2020, 5555555, '2016-08-12 00:00:00'),
 (9, 0, 'january', 2013, 0, '2016-08-06 12:04:52'),
-(10, 0, 'February', 2013, 0, '2016-08-06 12:13:47');
+(10, 0, 'February', 2013, 0, '2016-08-06 12:13:47'),
+(11, 0, 'March', 2016, 12000, '2016-08-09 02:10:50'),
+(12, 0, 'March', 2016, 12000, '2016-08-09 05:19:28'),
+(13, 7, 'March', 2016, 12000, '2016-08-09 00:00:00'),
+(14, 7, 'March', 2016, 12000, '2016-08-09 00:00:00'),
+(15, 7, 'August', 2016, 12000, '2016-08-09 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -452,7 +463,10 @@ INSERT INTO `installment_deposite` (`id`, `account_no`, `date`, `traking_no`, `a
 (1, '123555', '2016-08-03', 555, '400000', '16'),
 (2, '11111', '2016-01-01', 8743574, '1200', '1'),
 (3, '11112', '2016-08-05', 5111, '5000', '1'),
-(4, '11112', '2016-08-06', 5616, '7500', '2');
+(4, '11112', '2016-08-06', 5616, '7500', '2'),
+(5, '11111', '2016-08-09', 3333, '1000', '1'),
+(6, '11131', '2016-08-09', 89562, '1833', '1'),
+(7, '11131', '2016-09-09', 852665, '1833', '2');
 
 -- --------------------------------------------------------
 
@@ -537,7 +551,9 @@ CREATE TABLE `new_loan` (
 --
 
 INSERT INTO `new_loan` (`newloan_id`, `account_no`, `date`, `loan_amount`, `interest_amount`, `installment`, `grantors`) VALUES
-(4, '11112', '2016-08-08', '50000', 7500, '36', 'Mahabub');
+(4, '11112', '2016-08-08', '50000', 7500, '36', 'Mahabub'),
+(8, '11111', '2016-08-09', '10000', 1000, '12', 'qweqweqw'),
+(9, '11131', '2016-08-09', '20000', 2000, '12', 'rabbani');
 
 -- --------------------------------------------------------
 
@@ -1013,7 +1029,7 @@ ALTER TABLE `years`
 -- AUTO_INCREMENT for table `account_holders`
 --
 ALTER TABLE `account_holders`
-  MODIFY `account_holder_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11129;
+  MODIFY `account_holder_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11133;
 --
 -- AUTO_INCREMENT for table `account_statement`
 --
@@ -1063,7 +1079,7 @@ ALTER TABLE `dealers`
 -- AUTO_INCREMENT for table `deposite_withdraw`
 --
 ALTER TABLE `deposite_withdraw`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `districts`
 --
@@ -1088,12 +1104,12 @@ ALTER TABLE `document_types`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `employee_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `employee_salary`
 --
 ALTER TABLE `employee_salary`
-  MODIFY `salary_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `salary_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `genders`
 --
@@ -1113,7 +1129,7 @@ ALTER TABLE `installment`
 -- AUTO_INCREMENT for table `installment_deposite`
 --
 ALTER TABLE `installment_deposite`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `installment_type`
 --
@@ -1133,7 +1149,7 @@ ALTER TABLE `months`
 -- AUTO_INCREMENT for table `new_loan`
 --
 ALTER TABLE `new_loan`
-  MODIFY `newloan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `newloan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `nominees`
 --
