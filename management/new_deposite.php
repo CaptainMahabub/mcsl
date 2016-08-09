@@ -433,7 +433,7 @@
       <tr>
       <td><label class = "sr-only" for = "name">Tracking Number</label></td>
       <td>
-      <input type = "text" name="tracking_no" class = "form-control" id = "tracking_no" placeholder = "Tracking Number"></td></tr>
+      <input type = "text" name="tracking_no" class = "form-control" id = "tracking_no" placeholder = "Tracking Number / Check No"></td></tr>
    </div>
    <div class = "form-group">
    

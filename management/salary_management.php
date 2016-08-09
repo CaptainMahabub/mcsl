@@ -54,15 +54,15 @@
   <option value="january">January</option>
   <option value="February">February</option>
   <option value="March">March</option>
-  <option value="March">April</option>
-  <option value="March">May</option>
-  <option value="March">June</option>
-  <option value="March">July</option>
-  <option value="March">August</option>
-  <option value="March">September</option>
-  <option value="March">October</option>
-  <option value="March">November</option>
-  <option value="March">December</option>
+  <option value="April">April</option>
+  <option value="May">May</option>
+  <option value="June">June</option>
+  <option value="July">July</option>
+  <option value="August">August</option>
+  <option value="September">September</option>
+  <option value="October">October</option>
+  <option value="November">November</option>
+  <option value="December">December</option>
 </select>
    </div>
    <div class = "form-group">
