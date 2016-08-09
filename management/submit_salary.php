@@ -7,18 +7,18 @@ require('db_config.php');
 extract($_POST);
 
 //$password = md5($password);
-$salarypaydate = date('Y-m-d h-i-s');
+//$salarypaydate = date('Y-m-d h-i-s');
 
 
 
 
 
 $mysqli->query("INSERT INTO employee_salary  VALUES
-('', '$name', '$month', '$year', '$salary', '$salarypaydate')");
+('', '$employeename', '$month', '$year', '$salary', '$salarypaydate')");
 
 if($mysqli->affected_rows>0){
 	
-header("location:index.php");
+header("location:view_employee_salary.php");
 
 }
 else{
