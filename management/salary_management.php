@@ -28,8 +28,8 @@
    <div class = "modal-body">
     <form role = "form" name="salary_form" method="post" action="submit_salary.php">
 			
- 	  <?php include("db_config.php");
-			$query=$mysqli->query("SELECT employee_id, employee_name FROM employees"); ?>  
+ 	  <?php require("db_config.php");
+			$query=$mysqli->query("SELECT employee_id, employee_name FROM employees"); ?>
 
    <div class = "form-group">
       
